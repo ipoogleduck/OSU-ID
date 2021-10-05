@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qqS-EJ-AMs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -35,23 +35,39 @@
             </objects>
             <point key="canvasLocation" x="20" y="70"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PyO-je-HRv">
+            <objects>
+                <navigationController storyboardIdentifier="IDHostNVC" id="wke-M9-dro" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1h1-3L-db5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qqS-EJ-AMs" kind="relationship" relationship="rootViewController" id="Pjf-q4-coc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RhM-U7-lVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="-702"/>
+        </scene>
         <!--IDVC-->
         <scene sceneID="DQ9-id-yBO">
             <objects>
-                <viewController id="qqS-EJ-AMs" customClass="IDVC" customModule="OSU_ID" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IDVC" id="qqS-EJ-AMs" customClass="IDVC" customModule="OSU_ID" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oXX-bS-Wmp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-h6-yWV">
-                                <rect key="frame" x="20" y="251" width="374" height="60"/>
+                                <rect key="frame" x="20" y="275" width="374" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ID Number Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0d-jZ-RVc">
                                         <rect key="frame" x="12" y="16.5" width="350" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
-                                            <action selector="IDTextFeild:" destination="qqS-EJ-AMs" eventType="valueChanged" id="BZA-ya-m3k"/>
+                                            <action selector="IDTextFeild:" destination="qqS-EJ-AMs" eventType="editingChanged" id="Uwf-AO-bI9"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -64,52 +80,123 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add OSU ID Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os4-gu-w6M">
-                                <rect key="frame" x="20" y="94" width="374" height="36"/>
+                                <rect key="frame" x="20" y="118" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your OSU ID number is used to generate the barocde used for DiningDollars." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5D-ba-myP">
-                                <rect key="frame" x="20" y="140" width="374" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your OSU ID number is used to generate the barcode used for DiningDollars." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5D-ba-myP">
+                                <rect key="frame" x="20" y="164" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxh-RR-0HO">
-                                <rect key="frame" x="340" y="44" width="54" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                <connections>
-                                    <action selector="nextButton:" destination="qqS-EJ-AMs" eventType="touchUpInside" id="stm-HS-VPs"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CFX-Ll-JYU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CFX-Ll-JYU" firstAttribute="trailing" secondItem="Z5D-ba-myP" secondAttribute="trailing" constant="20" id="CsQ-Ql-jfv"/>
-                            <constraint firstItem="fxh-RR-0HO" firstAttribute="top" secondItem="CFX-Ll-JYU" secondAttribute="top" id="PGU-Lw-dA5"/>
                             <constraint firstItem="Os4-gu-w6M" firstAttribute="leading" secondItem="CFX-Ll-JYU" secondAttribute="leading" constant="20" id="Qe5-5H-zLb"/>
                             <constraint firstItem="CFX-Ll-JYU" firstAttribute="trailing" secondItem="ulE-h6-yWV" secondAttribute="trailing" constant="20" id="U6n-IX-Lvv"/>
                             <constraint firstItem="ulE-h6-yWV" firstAttribute="top" secondItem="Z5D-ba-myP" secondAttribute="bottom" constant="70" id="UZt-Wb-wBe"/>
-                            <constraint firstItem="Os4-gu-w6M" firstAttribute="top" secondItem="CFX-Ll-JYU" secondAttribute="top" constant="50" id="dTL-SI-yz7"/>
+                            <constraint firstItem="Os4-gu-w6M" firstAttribute="top" secondItem="CFX-Ll-JYU" secondAttribute="top" constant="30" id="dTL-SI-yz7"/>
                             <constraint firstItem="CFX-Ll-JYU" firstAttribute="trailing" secondItem="Os4-gu-w6M" secondAttribute="trailing" constant="20" id="jzf-Nl-DMV"/>
                             <constraint firstItem="Z5D-ba-myP" firstAttribute="top" secondItem="Os4-gu-w6M" secondAttribute="bottom" constant="10" id="ofB-wg-1Dr"/>
                             <constraint firstItem="Z5D-ba-myP" firstAttribute="leading" secondItem="CFX-Ll-JYU" secondAttribute="leading" constant="20" id="pb8-bl-e0t"/>
-                            <constraint firstItem="CFX-Ll-JYU" firstAttribute="trailing" secondItem="fxh-RR-0HO" secondAttribute="trailing" constant="20" id="um1-f4-c1S"/>
                             <constraint firstItem="ulE-h6-yWV" firstAttribute="leading" secondItem="CFX-Ll-JYU" secondAttribute="leading" constant="20" id="vin-OE-ZsD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nJC-E1-wpG">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="ebx-up-meb">
+                            <connections>
+                                <action selector="nextButton:" destination="qqS-EJ-AMs" id="f7Q-4s-Gt6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="IDTextFeild" destination="h0d-jZ-RVc" id="FFU-ZN-4Lp"/>
-                        <outlet property="IDTextFeildBKView" destination="ulE-h6-yWV" id="YDU-IU-H79"/>
-                        <outlet property="nextButton" destination="fxh-RR-0HO" id="R6o-Bi-kCi"/>
+                        <outlet property="IDTextField" destination="h0d-jZ-RVc" id="5Qk-hA-n1B"/>
+                        <outlet property="IDTextFieldBKView" destination="ulE-h6-yWV" id="4fl-A7-Guj"/>
+                        <outlet property="nextButton" destination="ebx-up-meb" id="Xla-1R-vdx"/>
                         <outlet property="titleTopConstraint" destination="dTL-SI-yz7" id="sOJ-9p-idh"/>
+                        <segue destination="WPL-or-4cy" kind="show" identifier="toNameSegue" id="z54-yH-dLO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7Z-BD-aRu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.985507246377" y="69.642857142857139"/>
+            <point key="canvasLocation" x="922" y="-702"/>
+        </scene>
+        <!--NameVC-->
+        <scene sceneID="FuG-8x-9KO">
+            <objects>
+                <viewController id="WPL-or-4cy" customClass="NameVC" customModule="OSU_ID" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AAr-ae-jOw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Name to ID Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42x-Ux-S1K">
+                                <rect key="frame" x="20" y="113" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Optional) Add your full name to show up on your ID Card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5g-sx-cyB">
+                                <rect key="frame" x="20" y="169" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zds-eu-K6o">
+                                <rect key="frame" x="20" y="270" width="374" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First and Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-yO-wft">
+                                        <rect key="frame" x="12" y="16.5" width="350" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
+                                        <connections>
+                                            <action selector="nameTF:" destination="WPL-or-4cy" eventType="editingChanged" id="1hj-2i-Kc1"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ssf-yO-wft" secondAttribute="trailing" constant="12" id="EHH-yf-zvu"/>
+                                    <constraint firstAttribute="height" constant="60" id="Qiu-3k-Whr"/>
+                                    <constraint firstItem="Ssf-yO-wft" firstAttribute="centerY" secondItem="Zds-eu-K6o" secondAttribute="centerY" id="cVU-BU-Rpw"/>
+                                    <constraint firstItem="Ssf-yO-wft" firstAttribute="leading" secondItem="Zds-eu-K6o" secondAttribute="leading" constant="12" id="vfq-YH-Gad"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7cc-BE-SVC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7cc-BE-SVC" firstAttribute="trailing" secondItem="y5g-sx-cyB" secondAttribute="trailing" constant="20" id="3Ov-CF-SvB"/>
+                            <constraint firstItem="42x-Ux-S1K" firstAttribute="leading" secondItem="7cc-BE-SVC" secondAttribute="leading" constant="20" id="8gZ-gh-fh3"/>
+                            <constraint firstItem="y5g-sx-cyB" firstAttribute="leading" secondItem="7cc-BE-SVC" secondAttribute="leading" constant="20" id="A6S-sn-jmg"/>
+                            <constraint firstItem="7cc-BE-SVC" firstAttribute="trailing" secondItem="42x-Ux-S1K" secondAttribute="trailing" constant="20" id="AZj-S3-Cl6"/>
+                            <constraint firstItem="y5g-sx-cyB" firstAttribute="top" secondItem="42x-Ux-S1K" secondAttribute="bottom" constant="20" id="EL1-nZ-q9L"/>
+                            <constraint firstItem="42x-Ux-S1K" firstAttribute="top" secondItem="7cc-BE-SVC" secondAttribute="top" constant="25" id="KVu-Zr-YHI"/>
+                            <constraint firstItem="Zds-eu-K6o" firstAttribute="top" secondItem="y5g-sx-cyB" secondAttribute="bottom" constant="60" id="NDV-VN-SqG"/>
+                            <constraint firstItem="Zds-eu-K6o" firstAttribute="leading" secondItem="7cc-BE-SVC" secondAttribute="leading" constant="20" id="VQe-px-3Yi"/>
+                            <constraint firstItem="7cc-BE-SVC" firstAttribute="trailing" secondItem="Zds-eu-K6o" secondAttribute="trailing" constant="20" id="eJm-HG-AJA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="idY-fb-dg3">
+                        <barButtonItem key="rightBarButtonItem" title="Skip" id="4Q1-HG-fKb">
+                            <connections>
+                                <action selector="skipButton:" destination="WPL-or-4cy" id="zC6-Fc-sax"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTF" destination="Ssf-yO-wft" id="DPg-dN-6WG"/>
+                        <outlet property="nameTextFieldBKView" destination="Zds-eu-K6o" id="eEG-Q1-7UA"/>
+                        <outlet property="skipButton" destination="4Q1-HG-fKb" id="E7A-VL-Ve6"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHomeSegue" modalPresentationStyle="fullScreen" id="a9s-ic-mZw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEa-pk-xDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="-702"/>
         </scene>
     </scenes>
     <resources>

@@ -1,0 +1,20 @@
+PODS:
+  - ALRT (1.3.7)
+  - RSBarcodes_Swift (5.1.1)
+
+DEPENDENCIES:
+  - ALRT
+  - RSBarcodes_Swift
+
+SPEC REPOS:
+  trunk:
+    - ALRT
+    - RSBarcodes_Swift
+
+SPEC CHECKSUMS:
+  ALRT: 7a83272617455872531b2982a0c8a1a4d9a24112
+  RSBarcodes_Swift: 9be8dd1d00b9ac12e72f3d853cacb680c7722c9f
+
+PODFILE CHECKSUM: a5789b7b13626ab165e9b84deb03c0bccece361a
+
+COCOAPODS: 1.11.2
