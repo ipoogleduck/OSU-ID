@@ -34,6 +34,17 @@ class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         }
     }
     
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if section == 3 {
+            var string = "Version \(appVersion)"
+            #if DEBUG
+                string.append(" build \(appBuild)")
+            #endif
+            return string
+        }
+        return nil
+    }
+    
     func sendEmail(subject: String, body: String) {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
