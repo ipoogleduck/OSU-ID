@@ -46,8 +46,12 @@ class NameVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func skipButton(_ sender: Any) {
-        if isValidName() {
-            let text = nameTF.text
+        if isValidName() || hasOpenedMainScreen {
+            var text: String? = nameTF.text
+            if text == "" {
+                text = nil
+            }
+            name = text
             UserDefaults.save(text, key: .name)
         }
         if hasOpenedMainScreen {

@@ -7,6 +7,7 @@
 
 import Foundation
 
+let defaultsSuiteName = UserDefaults(suiteName: "group.ipooglecodes.osuid")!
 
 extension UserDefaults {
     
@@ -16,22 +17,22 @@ extension UserDefaults {
     }
     
     static func getString(key: Keys) -> String? {
-        return UserDefaults.standard.string(forKey: key.rawValue)
+        return defaultsSuiteName.string(forKey: key.rawValue)
     }
     
     static func getBool(key: Keys) -> Bool {
-        return UserDefaults.standard.bool(forKey: key.rawValue)
+        return defaultsSuiteName.bool(forKey: key.rawValue)
     }
     
     static func getInt(key: Keys) -> Int {
-        return UserDefaults.standard.integer(forKey: key.rawValue)
+        return defaultsSuiteName.integer(forKey: key.rawValue)
     }
     
     static func getArray(key: Keys) -> [Any]? {
-        return UserDefaults.standard.array(forKey: key.rawValue)
+        return defaultsSuiteName.array(forKey: key.rawValue)
     }
     
     static func save(_ data: Any?, key: Keys) {
-        UserDefaults.standard.set(data, forKey: key.rawValue)
+        defaultsSuiteName.set(data, forKey: key.rawValue)
     }
 }

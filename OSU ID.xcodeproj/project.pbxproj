@@ -13,12 +13,43 @@
 		745F3B01270A696500EC5B16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 745F3AFF270A696500EC5B16 /* Main.storyboard */; };
 		745F3B03270A696A00EC5B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745F3B02270A696A00EC5B16 /* Assets.xcassets */; };
 		745F3B06270A696A00EC5B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 745F3B04270A696A00EC5B16 /* LaunchScreen.storyboard */; };
+		7464AED4270D571F000C8CA4 /* NotificationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464AED3270D571F000C8CA4 /* NotificationsTVC.swift */; };
+		7464AED5270D5F51000C8CA4 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */; };
 		74DE63BC270CDC0000FB0A40 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */; };
 		74DE63BE270CE04800FB0A40 /* NameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BD270CE04800FB0A40 /* NameVC.swift */; };
 		74F8651A270BFF5E00EBC516 /* IDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F86519270BFF5E00EBC516 /* IDVC.swift */; };
 		74FAB61E270D066D0041B1E1 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB61D270D066D0041B1E1 /* SettingsTVC.swift */; };
+		74FAB625270D3E500041B1E1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FAB624270D3E500041B1E1 /* WidgetKit.framework */; };
+		74FAB627270D3E500041B1E1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FAB626270D3E500041B1E1 /* SwiftUI.framework */; };
+		74FAB62A270D3E500041B1E1 /* OSUIDWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB629270D3E500041B1E1 /* OSUIDWidget.swift */; };
+		74FAB62C270D3E570041B1E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB62B270D3E570041B1E1 /* Assets.xcassets */; };
+		74FAB630270D3E570041B1E1 /* OSUIDWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 74FAB623270D3E500041B1E1 /* OSUIDWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8D6C1798A01FFA39BE37BFAE /* Pods_OSU_ID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4645186A90138747724DFD /* Pods_OSU_ID.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74FAB62E270D3E570041B1E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 745F3AEE270A696500EC5B16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74FAB622270D3E500041B1E1;
+			remoteInfo = OSUIDWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		74FAB631270D3E570041B1E1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				74FAB630270D3E570041B1E1 /* OSUIDWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A105207C293FA13451D2D33 /* Pods-OSU ID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSU ID.debug.xcconfig"; path = "Target Support Files/Pods-OSU ID/Pods-OSU ID.debug.xcconfig"; sourceTree = "<group>"; };
@@ -33,10 +64,17 @@
 		745F3B05270A696A00EC5B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		745F3B07270A696A00EC5B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		745F3B0D270BB75700EC5B16 /* OSU ID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OSU ID.entitlements"; sourceTree = "<group>"; };
+		7464AED3270D571F000C8CA4 /* NotificationsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTVC.swift; sourceTree = "<group>"; };
 		74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		74DE63BD270CE04800FB0A40 /* NameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameVC.swift; sourceTree = "<group>"; };
 		74F86519270BFF5E00EBC516 /* IDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDVC.swift; sourceTree = "<group>"; };
 		74FAB61D270D066D0041B1E1 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
+		74FAB623270D3E500041B1E1 /* OSUIDWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OSUIDWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		74FAB624270D3E500041B1E1 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		74FAB626270D3E500041B1E1 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		74FAB629270D3E500041B1E1 /* OSUIDWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSUIDWidget.swift; sourceTree = "<group>"; };
+		74FAB62B270D3E570041B1E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74FAB62D270D3E570041B1E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +86,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74FAB620270D3E500041B1E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74FAB627270D3E500041B1E1 /* SwiftUI.framework in Frameworks */,
+				74FAB625270D3E500041B1E1 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				745F3AF8270A696500EC5B16 /* OSU ID */,
+				74FAB628270D3E500041B1E1 /* OSUIDWidget */,
 				745F3AF7270A696500EC5B16 /* Products */,
 				D4FDA6027C29F28C05ED497D /* Pods */,
 				D18F79F5D0E63AC609192086 /* Frameworks */,
@@ -65,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				745F3AF6270A696500EC5B16 /* OSU ID.app */,
+				74FAB623270D3E500041B1E1 /* OSUIDWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +129,7 @@
 				74F86519270BFF5E00EBC516 /* IDVC.swift */,
 				74DE63BD270CE04800FB0A40 /* NameVC.swift */,
 				74FAB61D270D066D0041B1E1 /* SettingsTVC.swift */,
+				7464AED3270D571F000C8CA4 /* NotificationsTVC.swift */,
 				745F3AFF270A696500EC5B16 /* Main.storyboard */,
 				745F3B02270A696A00EC5B16 /* Assets.xcassets */,
 				745F3B04270A696A00EC5B16 /* LaunchScreen.storyboard */,
@@ -88,10 +138,22 @@
 			path = "OSU ID";
 			sourceTree = "<group>";
 		};
+		74FAB628270D3E500041B1E1 /* OSUIDWidget */ = {
+			isa = PBXGroup;
+			children = (
+				74FAB629270D3E500041B1E1 /* OSUIDWidget.swift */,
+				74FAB62B270D3E570041B1E1 /* Assets.xcassets */,
+				74FAB62D270D3E570041B1E1 /* Info.plist */,
+			);
+			path = OSUIDWidget;
+			sourceTree = "<group>";
+		};
 		D18F79F5D0E63AC609192086 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				2E4645186A90138747724DFD /* Pods_OSU_ID.framework */,
+				74FAB624270D3E500041B1E1 /* WidgetKit.framework */,
+				74FAB626270D3E500041B1E1 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,15 +179,34 @@
 				745F3AF3270A696500EC5B16 /* Frameworks */,
 				745F3AF4270A696500EC5B16 /* Resources */,
 				2E25849D5DB523ECFE0C6209 /* [CP] Embed Pods Frameworks */,
+				74FAB631270D3E570041B1E1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				74FAB62F270D3E570041B1E1 /* PBXTargetDependency */,
 			);
 			name = "OSU ID";
 			productName = "OSU ID";
 			productReference = 745F3AF6270A696500EC5B16 /* OSU ID.app */;
 			productType = "com.apple.product-type.application";
+		};
+		74FAB622270D3E500041B1E1 /* OSUIDWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74FAB634270D3E570041B1E1 /* Build configuration list for PBXNativeTarget "OSUIDWidgetExtension" */;
+			buildPhases = (
+				74FAB61F270D3E500041B1E1 /* Sources */,
+				74FAB620270D3E500041B1E1 /* Frameworks */,
+				74FAB621270D3E500041B1E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSUIDWidgetExtension;
+			productName = OSUIDWidgetExtension;
+			productReference = 74FAB623270D3E500041B1E1 /* OSUIDWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -138,6 +219,9 @@
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					745F3AF5270A696500EC5B16 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					74FAB622270D3E500041B1E1 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
@@ -156,6 +240,7 @@
 			projectRoot = "";
 			targets = (
 				745F3AF5270A696500EC5B16 /* OSU ID */,
+				74FAB622270D3E500041B1E1 /* OSUIDWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -168,6 +253,14 @@
 				745F3B06270A696A00EC5B16 /* LaunchScreen.storyboard in Resources */,
 				745F3B03270A696A00EC5B16 /* Assets.xcassets in Resources */,
 				745F3B01270A696500EC5B16 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74FAB621270D3E500041B1E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74FAB62C270D3E570041B1E1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7464AED4270D571F000C8CA4 /* NotificationsTVC.swift in Sources */,
 				745F3AFE270A696500EC5B16 /* ViewController.swift in Sources */,
 				74DE63BC270CDC0000FB0A40 /* UserDefaults.swift in Sources */,
 				74FAB61E270D066D0041B1E1 /* SettingsTVC.swift in Sources */,
@@ -230,7 +324,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74FAB61F270D3E500041B1E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7464AED5270D5F51000C8CA4 /* UserDefaults.swift in Sources */,
+				74FAB62A270D3E500041B1E1 /* OSUIDWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74FAB62F270D3E570041B1E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74FAB622270D3E500041B1E1 /* OSUIDWidgetExtension */;
+			targetProxy = 74FAB62E270D3E570041B1E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		745F3AFF270A696500EC5B16 /* Main.storyboard */ = {
@@ -372,11 +483,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A105207C293FA13451D2D33 /* Pods-OSU ID.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OSU ID/OSU ID.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OSU ID/Info.plist";
@@ -404,11 +516,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63A1C9C063E0A6E86DB22E1C /* Pods-OSU ID.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OSU ID/OSU ID.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OSU ID/Info.plist";
@@ -432,6 +545,62 @@
 			};
 			name = Release;
 		};
+		74FAB632270D3E570041B1E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 5E845TX3E6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OSUIDWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OSUIDWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipooglecodes.OSU-ID.OSUIDWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74FAB633270D3E570041B1E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 5E845TX3E6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OSUIDWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OSUIDWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipooglecodes.OSU-ID.OSUIDWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -449,6 +618,15 @@
 			buildConfigurations = (
 				745F3B0B270A696A00EC5B16 /* Debug */,
 				745F3B0C270A696A00EC5B16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74FAB634270D3E570041B1E1 /* Build configuration list for PBXNativeTarget "OSUIDWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74FAB632270D3E570041B1E1 /* Debug */,
+				74FAB633270D3E570041B1E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -6,15 +6,58 @@
 //
 
 import UIKit
+import MessageUI
 
-class SettingsTVC: UITableViewController {
+var appVersion = ""
+var appBuild = ""
+
+class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            appVersion = version
+        }
+        if let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            appBuild = build
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 3 {
+            if indexPath.row == 0 {
+                sendEmail(subject: "OSU ID Feature Suggestion", body: "")
+            } else {
+                sendEmail(subject: "OSU ID Bug Report", body: "")
+            }
+        }
+    }
+    
+    func sendEmail(subject: String, body: String) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["gorowapp@gmail.com"])
+            mail.setSubject(subject)
+            mail.setMessageBody("\(body)", isHTML: true)
+            present(mail, animated: true)
+        } else {
+            let alert = UIAlertController(title: "No Email Set Up", message: "Set up email in settings to use this feature.", preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+            alert.addAction(dismiss)
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+        if result == .sent {
+            let alert = UIAlertController(title: "Thanks for your feedback!", message: "We'll get back to you if necessary", preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+            alert.addAction(dismiss)
+            self.present(alert, animated: true)
+        }
     }
     
 }

@@ -13,18 +13,33 @@ var hasOpenedMainScreen = false
 
 class ViewController: UIViewController {
 
+    @IBOutlet var IDBKView: UIView!
     @IBOutlet var barcodeImage: UIImageView!
+    @IBOutlet var nameHeaderLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hasOpenedMainScreen = true
-        
+        IDBKView.layer.cornerRadius = 15
+        IDBKView.layer.shadowColor = UIColor.black.cgColor
+        IDBKView.layer.shadowOpacity = 0.3
+        IDBKView.layer.shadowOffset = CGSize(width: 0, height: 10)
+        IDBKView.layer.shadowRadius = 20
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         reloadBarcode()
+        if let name = name {
+            nameLabel.text = name
+            nameLabel.isHidden = false
+            nameHeaderLabel.isHidden = false
+        } else {
+            nameLabel.isHidden = true
+            nameHeaderLabel.isHidden = true
+        }
     }
     
     func reloadBarcode() {
