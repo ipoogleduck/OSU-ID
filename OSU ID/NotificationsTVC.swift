@@ -63,6 +63,13 @@ class NotificationsTVC: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if section == 0 {
+            return "A notification prompting you to open your ID card will appear on your lock screen when you enter any of the following areas"
+        }
+        return ""
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let place = places[indexPath.row]
         if let cell = tableView.cellForRow(at: indexPath) as? BasicTextCell {

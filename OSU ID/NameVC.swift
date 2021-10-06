@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WidgetKit
 
 class NameVC: UIViewController, UITextFieldDelegate {
     
@@ -55,6 +56,9 @@ class NameVC: UIViewController, UITextFieldDelegate {
             UserDefaults.save(text, key: .name)
         }
         if hasOpenedMainScreen {
+            if #available(iOS 14.0, *) {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
             navigationController?.popViewController(animated: true)
         } else {
             performSegue(withIdentifier: "toHomeSegue", sender: self)

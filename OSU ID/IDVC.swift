@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WidgetKit
 
 class IDVC: UIViewController, UITextFieldDelegate {
     
@@ -89,6 +90,9 @@ class IDVC: UIViewController, UITextFieldDelegate {
         idNumber = id
         UserDefaults.save(id, key: .idNumber)
         if hasOpenedMainScreen {
+            if #available(iOS 14.0, *) {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
             navigationController?.popViewController(animated: true)
         } else {
             performSegue(withIdentifier: "toNameSegue", sender: self)

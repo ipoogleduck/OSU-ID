@@ -9,12 +9,15 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
+    
+    @AppStorage("name") var name = UserDefaults.getString(key: .name) ?? ""
+    
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), name: "---")
+        SimpleEntry(date: Date(), name: "----------")
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), name: "------")
+        let entry = SimpleEntry(date: Date(), name: name)
         completion(entry)
     }
 
@@ -23,13 +26,10 @@ struct Provider: TimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, name: UserDefaults.getString(key: .name) ?? "")
-            entries.append(entry)
-        }
+        let entry = SimpleEntry(date: currentDate, name: name)
+        entries = [entry]
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(entries: entries, policy: .never)
         completion(timeline)
     }
 }
@@ -51,18 +51,20 @@ struct OSUIDWidgetEntryView : View {
                     Image("osuLogo").resizable().frame(width: 72, height: 40, alignment: .center).padding()
                     Spacer()
                     VStack {
-                        HStack {
-                            Spacer()
-                            Text("NAME")
-                                .foregroundColor(Color("mainColor"))
-                                .font(
-                                    .system(size: 12)
-                                        .bold())
-                        }
-                        HStack {
-                            Spacer()
-                            Text(entry.name)
-                                .foregroundColor(Color.black)
+                        if entry.name != "" {
+                            HStack {
+                                Spacer()
+                                Text("NAME")
+                                    .foregroundColor(Color("mainColor"))
+                                    .font(
+                                        .system(size: 12)
+                                            .bold())
+                            }
+                            HStack {
+                                Spacer()
+                                Text(entry.name)
+                                    .foregroundColor(Color.black)
+                            }
                         }
                     }.padding()
                 }
