@@ -7,6 +7,9 @@
 
 import UIKit
 
+var idNumber: String?
+var name: String?
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -17,9 +20,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        if UserDefaults.getInt(key: .idNumber) == 0 {
+        if let id = UserDefaults.getString(key: .idNumber), id != "" {
+            idNumber = id
+        } else {
             let rootController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IDHostNVC")
             self.window?.rootViewController = rootController
+        }
+        
+        if let savedName = UserDefaults.getString(key: .name), savedName != "" {
+            name = savedName
         }
         
         guard let _ = (scene as? UIWindowScene) else { return }

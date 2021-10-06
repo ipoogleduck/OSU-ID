@@ -16,6 +16,7 @@
 		74DE63BC270CDC0000FB0A40 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */; };
 		74DE63BE270CE04800FB0A40 /* NameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BD270CE04800FB0A40 /* NameVC.swift */; };
 		74F8651A270BFF5E00EBC516 /* IDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F86519270BFF5E00EBC516 /* IDVC.swift */; };
+		74FAB61E270D066D0041B1E1 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB61D270D066D0041B1E1 /* SettingsTVC.swift */; };
 		8D6C1798A01FFA39BE37BFAE /* Pods_OSU_ID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4645186A90138747724DFD /* Pods_OSU_ID.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		74DE63BD270CE04800FB0A40 /* NameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameVC.swift; sourceTree = "<group>"; };
 		74F86519270BFF5E00EBC516 /* IDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDVC.swift; sourceTree = "<group>"; };
+		74FAB61D270D066D0041B1E1 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */,
 				74F86519270BFF5E00EBC516 /* IDVC.swift */,
 				74DE63BD270CE04800FB0A40 /* NameVC.swift */,
+				74FAB61D270D066D0041B1E1 /* SettingsTVC.swift */,
 				745F3AFF270A696500EC5B16 /* Main.storyboard */,
 				745F3B02270A696A00EC5B16 /* Assets.xcassets */,
 				745F3B04270A696A00EC5B16 /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 			files = (
 				745F3AFE270A696500EC5B16 /* ViewController.swift in Sources */,
 				74DE63BC270CDC0000FB0A40 /* UserDefaults.swift in Sources */,
+				74FAB61E270D066D0041B1E1 /* SettingsTVC.swift in Sources */,
 				745F3AFA270A696500EC5B16 /* AppDelegate.swift in Sources */,
 				74DE63BE270CE04800FB0A40 /* NameVC.swift in Sources */,
 				745F3AFC270A696500EC5B16 /* SceneDelegate.swift in Sources */,

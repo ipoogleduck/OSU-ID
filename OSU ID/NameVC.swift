@@ -16,6 +16,10 @@ class NameVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextFieldBKView.layer.cornerRadius = 15
+        if hasOpenedMainScreen {
+            skipButton.title = "Save"
+        }
+        nameTF.text = name
         nameTF.delegate = self
         nameTF.becomeFirstResponder()
     }
@@ -46,13 +50,17 @@ class NameVC: UIViewController, UITextFieldDelegate {
             let text = nameTF.text
             UserDefaults.save(text, key: .name)
         }
-        performSegue(withIdentifier: "toHomeSegue", sender: self)
+        if hasOpenedMainScreen {
+            navigationController?.popViewController(animated: true)
+        } else {
+            performSegue(withIdentifier: "toHomeSegue", sender: self)
+        }
     }
     
     @IBAction func nameTF(_ sender: Any) {
-        if isValidName() {
+        if isValidName() && !hasOpenedMainScreen {
             skipButton.title = "Done"
-        } else {
+        } else if !hasOpenedMainScreen {
             skipButton.title = "Skip"
         }
     }

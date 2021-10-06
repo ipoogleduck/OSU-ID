@@ -17,8 +17,14 @@ class IDVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         IDTextFieldBKView.layer.cornerRadius = 15
+        if hasOpenedMainScreen {
+            nextButton.title = "Save"
+        }
         nextButton.isEnabled = false
         IDTextField.delegate = self
+        if let idNumber = idNumber {
+            IDTextField.text = addDashes(to: idNumber)
+        }
         IDTextField.becomeFirstResponder()
     }
     
@@ -62,22 +68,31 @@ class IDVC: UIViewController, UITextFieldDelegate {
         
         let cleanNumber = cleanText(text)
         
-        var newText = ""
-        for i in 0 ..< cleanNumber.count {
-            if i == 3 || i == 6 {
-                newText.append("-")
-            }
-            newText.append(cleanNumber[i])
-        }
-        
-        IDTextField.text = newText
+        IDTextField.text = addDashes(to: cleanNumber)
         
         nextButton.isEnabled = isValidID()
     }
     
+    func addDashes(to id: String) -> String {
+        var newText = ""
+        for i in 0 ..< id.count {
+            if i == 3 || i == 6 {
+                newText.append("-")
+            }
+            newText.append(id[i])
+        }
+        return newText
+    }
+    
     @IBAction func nextButton(_ sender: Any) {
-        UserDefaults.save(cleanText(IDTextField.text!), key: .idNumber)
-        performSegue(withIdentifier: "toNameSegue", sender: self)
+        let id = cleanText(IDTextField.text!)
+        idNumber = id
+        UserDefaults.save(id, key: .idNumber)
+        if hasOpenedMainScreen {
+            navigationController?.popViewController(animated: true)
+        } else {
+            performSegue(withIdentifier: "toNameSegue", sender: self)
+        }
     }
     
     func cleanText(_ text: String) -> String {
