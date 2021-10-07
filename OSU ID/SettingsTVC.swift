@@ -23,6 +23,14 @@ class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if lastPage != 1, let lastBrightness = lastBrightness {
+            UIScreen.main.brightness = lastBrightness
+            lastPage = 1
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 3 {

@@ -10,6 +10,9 @@ import UIKit
 var idNumber: String?
 var name: String?
 
+var lastPage = 0
+var lastBrightness: CGFloat?
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -44,11 +47,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        if lastPage == 0 {
+            lastBrightness = UIScreen.main.brightness
+            UIScreen.main.brightness = 1
+        }
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
+        if lastPage == 0, let lastBrightness = lastBrightness {
+            UIScreen.main.brightness = lastBrightness
+        }
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {

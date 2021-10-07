@@ -11,13 +11,14 @@ import SwiftUI
 struct Provider: TimelineProvider {
     
     @AppStorage("name") var name = UserDefaults.getString(key: .name) ?? ""
+    @AppStorage("barcodeImage") var barcodeImageData = UserDefaults.getData(key: .barcodeImage) ?? UIImage(named: "blankImage")!.pngData()!
     
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), name: "----------")
+        SimpleEntry(date: Date(), name: "----------", barcodeData: barcodeImageData)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), name: name)
+        let entry = SimpleEntry(date: Date(), name: name, barcodeData: barcodeImageData)
         completion(entry)
     }
 
@@ -26,7 +27,7 @@ struct Provider: TimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        let entry = SimpleEntry(date: currentDate, name: name)
+        let entry = SimpleEntry(date: currentDate, name: name, barcodeData: barcodeImageData)
         entries = [entry]
 
         let timeline = Timeline(entries: entries, policy: .never)
@@ -37,6 +38,7 @@ struct Provider: TimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let name: String
+    let barcodeData: Data
 }
 
 struct OSUIDWidgetEntryView : View {
@@ -68,7 +70,9 @@ struct OSUIDWidgetEntryView : View {
                         }
                     }.padding()
                 }
-                Image("exampleBarcode").resizable().padding(EdgeInsets(top: 0, leading: 20, bottom: 15, trailing: 20))
+                if let image = UIImage(data: entry.barcodeData) {
+                    Image(uiImage: image).resizable().padding(EdgeInsets(top: 0, leading: 20, bottom: 15, trailing: 20))
+                }
             }
         }
         }
@@ -90,7 +94,7 @@ struct OSUIDWidget: Widget {
 
 struct OSUIDWidget_Previews: PreviewProvider {
     static var previews: some View {
-        OSUIDWidgetEntryView(entry: SimpleEntry(date: Date(), name: "Oliver Elliott"))
+        OSUIDWidgetEntryView(entry: SimpleEntry(date: Date(), name: "Oliver Elliott", barcodeData: UIImage(named: "exampleBarcode")!.pngData()!))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }

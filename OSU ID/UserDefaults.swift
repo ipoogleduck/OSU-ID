@@ -14,6 +14,7 @@ extension UserDefaults {
     enum Keys: String {
         case idNumber = "idNumber"
         case name = "name"
+        case barcodeImage = "barcodeImage"
     }
     
     static func getString(key: Keys) -> String? {
@@ -30,6 +31,10 @@ extension UserDefaults {
     
     static func getArray(key: Keys) -> [Any]? {
         return defaultsSuiteName.array(forKey: key.rawValue)
+    }
+    
+    static func getData(key: Keys) -> Data? {
+        return defaultsSuiteName.object(forKey: key.rawValue) as? Data
     }
     
     static func save(_ data: Any?, key: Keys) {

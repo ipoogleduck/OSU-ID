@@ -7,6 +7,8 @@
 
 import UIKit
 import WidgetKit
+import RSBarcodes_Swift
+import AVFoundation
 
 class IDVC: UIViewController, UITextFieldDelegate {
     
@@ -89,6 +91,12 @@ class IDVC: UIViewController, UITextFieldDelegate {
         let id = cleanText(IDTextField.text!)
         idNumber = id
         UserDefaults.save(id, key: .idNumber)
+        if let barcodeImage = RSUnifiedCodeGenerator.shared.generateCode(id, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39.rawValue) {
+            userBarcodeImage = barcodeImage
+            UserDefaults.save(barcodeImage.pngData(), key: .barcodeImage)
+        } else {
+            print("Error creating barcode")
+        }
         if hasOpenedMainScreen {
             if #available(iOS 14.0, *) {
                 WidgetCenter.shared.reloadAllTimelines()

@@ -6,10 +6,10 @@
 //
 
 import UIKit
-import RSBarcodes_Swift
-import AVFoundation
 
 var hasOpenedMainScreen = false
+
+var userBarcodeImage: UIImage?
 
 class ViewController: UIViewController {
 
@@ -41,13 +41,19 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        reloadBarcode()
         reloadName()
+        barcodeImage.image = userBarcodeImage
+        if lastPage == 1 {
+            lastBrightness = UIScreen.main.brightness
+            UIScreen.main.brightness = 1
+            lastPage = 0
+        }
     }
     
     func reloadBarcode() {
-        if let idNumber = idNumber {
-            barcodeImage.image = RSUnifiedCodeGenerator.shared.generateCode((idNumber), machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39.rawValue)
+        if let data = UserDefaults.getData(key: .barcodeImage) {
+            userBarcodeImage = UIImage(data: data)
+            barcodeImage.image = userBarcodeImage
         }
     }
     
