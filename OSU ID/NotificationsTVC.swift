@@ -14,13 +14,13 @@ struct PlaceStruct: Codable {
     var isEnabled: Bool
 }
 
+var places: [PlaceStruct] = [
+    PlaceStruct(name: "West Dining", lat: "44.5640477", lon: "-123.2840113", isEnabled: true),
+    PlaceStruct(name: "McNary Dining", lat: "44.5639404", lon: "-123.2720286", isEnabled: true),
+    PlaceStruct(name: "Arnold Dining", lat: "44.5606367", lon: "-123.2776630", isEnabled: true)
+]
+
 class NotificationsTVC: UITableViewController {
-    
-    var places = [
-        PlaceStruct(name: "West Dining", lat: "", lon: "", isEnabled: true),
-        PlaceStruct(name: "McNary Dining", lat: "", lon: "", isEnabled: true),
-        PlaceStruct(name: "Arnold Dining", lat: "", lon: "", isEnabled: true)
-    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()

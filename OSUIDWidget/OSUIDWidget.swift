@@ -10,24 +10,33 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     
-    @AppStorage("name") var name = UserDefaults.getString(key: .name) ?? ""
-    @AppStorage("barcodeImage") var barcodeImageData = UserDefaults.getData(key: .barcodeImage) ?? UIImage(named: "blankImage")!.pngData()!
+    //@AppStorage("name") var name = UserDefaults.getString(key: .name) ?? ""
+    //@AppStorage("barcodeImage") var barcodeImageData = UserDefaults.getData(key: .barcodeImage) ?? UIImage(named: "blankImage")!.pngData()!
     
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), name: "----------", barcodeData: barcodeImageData)
+        SimpleEntry(date: Date(), name: "----------", barcodeData: barcodeImageData())
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), name: name, barcodeData: barcodeImageData)
+        let entry = SimpleEntry(date: Date(), name: name(), barcodeData: barcodeImageData())
         completion(entry)
+    }
+    
+    func name() -> String {
+        UserDefaults.getString(key: .name) ?? ""
+    }
+    
+    func barcodeImageData() -> Data {
+        UserDefaults.getData(key: .barcodeImage) ?? UIImage(named: "blankImage")!.pngData()!
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+        
         let currentDate = Date()
-        let entry = SimpleEntry(date: currentDate, name: name, barcodeData: barcodeImageData)
+        let entry = SimpleEntry(date: currentDate, name: name(), barcodeData: barcodeImageData())
         entries = [entry]
 
         let timeline = Timeline(entries: entries, policy: .never)

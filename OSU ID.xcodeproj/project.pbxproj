@@ -15,6 +15,7 @@
 		745F3B06270A696A00EC5B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 745F3B04270A696A00EC5B16 /* LaunchScreen.storyboard */; };
 		7464AED4270D571F000C8CA4 /* NotificationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464AED3270D571F000C8CA4 /* NotificationsTVC.swift */; };
 		7464AED5270D5F51000C8CA4 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */; };
+		74CCB254270EC50500AF473C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCB253270EC50500AF473C /* Utils.swift */; };
 		74DE63BC270CDC0000FB0A40 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */; };
 		74DE63BE270CE04800FB0A40 /* NameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BD270CE04800FB0A40 /* NameVC.swift */; };
 		74F8651A270BFF5E00EBC516 /* IDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F86519270BFF5E00EBC516 /* IDVC.swift */; };
@@ -66,6 +67,7 @@
 		745F3B0D270BB75700EC5B16 /* OSU ID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OSU ID.entitlements"; sourceTree = "<group>"; };
 		7464AED3270D571F000C8CA4 /* NotificationsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTVC.swift; sourceTree = "<group>"; };
 		74732890270D892D00C56BCA /* OSUIDWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OSUIDWidgetExtension.entitlements; sourceTree = "<group>"; };
+		74CCB253270EC50500AF473C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		74DE63BD270CE04800FB0A40 /* NameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameVC.swift; sourceTree = "<group>"; };
 		74F86519270BFF5E00EBC516 /* IDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDVC.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				74F86519270BFF5E00EBC516 /* IDVC.swift */,
 				74DE63BD270CE04800FB0A40 /* NameVC.swift */,
 				74FAB61D270D066D0041B1E1 /* SettingsTVC.swift */,
+				74CCB253270EC50500AF473C /* Utils.swift */,
 				7464AED3270D571F000C8CA4 /* NotificationsTVC.swift */,
 				745F3AFF270A696500EC5B16 /* Main.storyboard */,
 				745F3B02270A696A00EC5B16 /* Assets.xcassets */,
@@ -317,6 +320,7 @@
 			files = (
 				7464AED4270D571F000C8CA4 /* NotificationsTVC.swift in Sources */,
 				745F3AFE270A696500EC5B16 /* ViewController.swift in Sources */,
+				74CCB254270EC50500AF473C /* Utils.swift in Sources */,
 				74DE63BC270CDC0000FB0A40 /* UserDefaults.swift in Sources */,
 				74FAB61E270D066D0041B1E1 /* SettingsTVC.swift in Sources */,
 				745F3AFA270A696500EC5B16 /* AppDelegate.swift in Sources */,
@@ -490,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OSU ID/OSU ID.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OSU ID/Info.plist";
@@ -524,7 +528,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OSU ID/OSU ID.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OSU ID/Info.plist";
@@ -556,7 +560,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = OSUIDWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OSUIDWidget/Info.plist;
@@ -585,7 +589,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = OSUIDWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OSUIDWidget/Info.plist;
