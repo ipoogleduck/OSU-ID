@@ -15,7 +15,7 @@ struct PlaceStruct: Codable {
 }
 
 var places: [PlaceStruct] = [
-    PlaceStruct(name: "West Dining", lat: "44.5640477", lon: "-123.2840113", isEnabled: true),
+    PlaceStruct(name: "West Dining", lat: "44.5639616", lon: "-123.2835075", isEnabled: true),
     PlaceStruct(name: "McNary Dining", lat: "44.5639404", lon: "-123.2720286", isEnabled: true),
     PlaceStruct(name: "Arnold Dining", lat: "44.5606367", lon: "-123.2776630", isEnabled: true)
 ]

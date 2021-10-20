@@ -43,11 +43,11 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         reloadName()
         barcodeImage.image = userBarcodeImage
-        if lastPage == 1 {
-            lastBrightness = UIScreen.main.brightness
-            UIScreen.main.brightness = 1
-            lastPage = 0
-        }
+//        if lastPage == 1 {
+//            lastBrightness = UIScreen.main.brightness
+//            UIScreen.main.brightness = 1
+//            lastPage = 0
+//        }
     }
     
     func reloadBarcode() {

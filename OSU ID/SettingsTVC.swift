@@ -25,10 +25,10 @@ class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if lastPage != 1, let lastBrightness = lastBrightness {
-            UIScreen.main.brightness = lastBrightness
-            lastPage = 1
-        }
+//        if lastPage != 1, let lastBrightness = lastBrightness {
+//            UIScreen.main.brightness = lastBrightness
+//            lastPage = 1
+//        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
