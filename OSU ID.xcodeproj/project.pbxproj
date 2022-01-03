@@ -15,6 +15,15 @@
 		745F3B06270A696A00EC5B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 745F3B04270A696A00EC5B16 /* LaunchScreen.storyboard */; };
 		7464AED4270D571F000C8CA4 /* NotificationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7464AED3270D571F000C8CA4 /* NotificationsTVC.swift */; };
 		7464AED5270D5F51000C8CA4 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */; };
+		74A782D627827D4A00627C1E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A782D427827D4A00627C1E /* Interface.storyboard */; };
+		74A782D827827D4F00627C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74A782D727827D4F00627C1E /* Assets.xcassets */; };
+		74A782DE27827D5000627C1E /* OSU ID Watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 74A782DD27827D5000627C1E /* OSU ID Watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		74A782E327827D5000627C1E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A782E227827D5000627C1E /* InterfaceController.swift */; };
+		74A782E527827D5000627C1E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A782E427827D5000627C1E /* ExtensionDelegate.swift */; };
+		74A782E727827D5000627C1E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A782E627827D5000627C1E /* NotificationController.swift */; };
+		74A782E927827D5000627C1E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A782E827827D5000627C1E /* ComplicationController.swift */; };
+		74A782EB27827D5300627C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74A782EA27827D5300627C1E /* Assets.xcassets */; };
+		74A782F027827D5400627C1E /* OSU ID Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 74A782D227827D4A00627C1E /* OSU ID Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		74CCB254270EC50500AF473C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCB253270EC50500AF473C /* Utils.swift */; };
 		74DE63BC270CDC0000FB0A40 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */; };
 		74DE63BE270CE04800FB0A40 /* NameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BD270CE04800FB0A40 /* NameVC.swift */; };
@@ -29,6 +38,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		74A782DF27827D5000627C1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 745F3AEE270A696500EC5B16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74A782DC27827D5000627C1E;
+			remoteInfo = "OSU ID Watch WatchKit Extension";
+		};
+		74A782EE27827D5400627C1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 745F3AEE270A696500EC5B16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74A782D127827D4A00627C1E;
+			remoteInfo = "OSU ID Watch";
+		};
 		74FAB62E270D3E570041B1E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 745F3AEE270A696500EC5B16 /* Project object */;
@@ -39,6 +62,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		74A782F127827D5400627C1E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				74A782F027827D5400627C1E /* OSU ID Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A782F427827D5400627C1E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				74A782DE27827D5000627C1E /* OSU ID Watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74FAB631270D3E570041B1E1 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,6 +112,17 @@
 		745F3B0D270BB75700EC5B16 /* OSU ID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OSU ID.entitlements"; sourceTree = "<group>"; };
 		7464AED3270D571F000C8CA4 /* NotificationsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTVC.swift; sourceTree = "<group>"; };
 		74732890270D892D00C56BCA /* OSUIDWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OSUIDWidgetExtension.entitlements; sourceTree = "<group>"; };
+		74A782D227827D4A00627C1E /* OSU ID Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OSU ID Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A782D527827D4A00627C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		74A782D727827D4F00627C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74A782DD27827D5000627C1E /* OSU ID Watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OSU ID Watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A782E227827D5000627C1E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		74A782E427827D5000627C1E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		74A782E627827D5000627C1E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		74A782E827827D5000627C1E /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		74A782EA27827D5300627C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74A782EC27827D5300627C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74A782ED27827D5300627C1E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		74CCB253270EC50500AF473C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		74DE63BD270CE04800FB0A40 /* NameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameVC.swift; sourceTree = "<group>"; };
@@ -89,6 +145,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74A782DA27827D5000627C1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74FAB620270D3E500041B1E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,6 +170,8 @@
 				74732890270D892D00C56BCA /* OSUIDWidgetExtension.entitlements */,
 				745F3AF8270A696500EC5B16 /* OSU ID */,
 				74FAB628270D3E500041B1E1 /* OSUIDWidget */,
+				74A782D327827D4A00627C1E /* OSU ID Watch */,
+				74A782E127827D5000627C1E /* OSU ID Watch WatchKit Extension */,
 				745F3AF7270A696500EC5B16 /* Products */,
 				D4FDA6027C29F28C05ED497D /* Pods */,
 				D18F79F5D0E63AC609192086 /* Frameworks */,
@@ -118,6 +183,8 @@
 			children = (
 				745F3AF6270A696500EC5B16 /* OSU ID.app */,
 				74FAB623270D3E500041B1E1 /* OSUIDWidgetExtension.appex */,
+				74A782D227827D4A00627C1E /* OSU ID Watch.app */,
+				74A782DD27827D5000627C1E /* OSU ID Watch WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +208,29 @@
 				745F3B07270A696A00EC5B16 /* Info.plist */,
 			);
 			path = "OSU ID";
+			sourceTree = "<group>";
+		};
+		74A782D327827D4A00627C1E /* OSU ID Watch */ = {
+			isa = PBXGroup;
+			children = (
+				74A782D427827D4A00627C1E /* Interface.storyboard */,
+				74A782D727827D4F00627C1E /* Assets.xcassets */,
+			);
+			path = "OSU ID Watch";
+			sourceTree = "<group>";
+		};
+		74A782E127827D5000627C1E /* OSU ID Watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				74A782E227827D5000627C1E /* InterfaceController.swift */,
+				74A782E427827D5000627C1E /* ExtensionDelegate.swift */,
+				74A782E627827D5000627C1E /* NotificationController.swift */,
+				74A782E827827D5000627C1E /* ComplicationController.swift */,
+				74A782EA27827D5300627C1E /* Assets.xcassets */,
+				74A782EC27827D5300627C1E /* Info.plist */,
+				74A782ED27827D5300627C1E /* PushNotificationPayload.apns */,
+			);
+			path = "OSU ID Watch WatchKit Extension";
 			sourceTree = "<group>";
 		};
 		74FAB628270D3E500041B1E1 /* OSUIDWidget */ = {
@@ -185,16 +275,52 @@
 				745F3AF4270A696500EC5B16 /* Resources */,
 				2E25849D5DB523ECFE0C6209 /* [CP] Embed Pods Frameworks */,
 				74FAB631270D3E570041B1E1 /* Embed App Extensions */,
+				74A782F127827D5400627C1E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				74FAB62F270D3E570041B1E1 /* PBXTargetDependency */,
+				74A782EF27827D5400627C1E /* PBXTargetDependency */,
 			);
 			name = "OSU ID";
 			productName = "OSU ID";
 			productReference = 745F3AF6270A696500EC5B16 /* OSU ID.app */;
 			productType = "com.apple.product-type.application";
+		};
+		74A782D127827D4A00627C1E /* OSU ID Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74A782F827827D5400627C1E /* Build configuration list for PBXNativeTarget "OSU ID Watch" */;
+			buildPhases = (
+				74A782D027827D4A00627C1E /* Resources */,
+				74A782F427827D5400627C1E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74A782E027827D5000627C1E /* PBXTargetDependency */,
+			);
+			name = "OSU ID Watch";
+			productName = "OSU ID Watch";
+			productReference = 74A782D227827D4A00627C1E /* OSU ID Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		74A782DC27827D5000627C1E /* OSU ID Watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74A782F727827D5400627C1E /* Build configuration list for PBXNativeTarget "OSU ID Watch WatchKit Extension" */;
+			buildPhases = (
+				74A782D927827D5000627C1E /* Sources */,
+				74A782DA27827D5000627C1E /* Frameworks */,
+				74A782DB27827D5000627C1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OSU ID Watch WatchKit Extension";
+			productName = "OSU ID Watch WatchKit Extension";
+			productReference = 74A782DD27827D5000627C1E /* OSU ID Watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		74FAB622270D3E500041B1E1 /* OSUIDWidgetExtension */ = {
 			isa = PBXNativeTarget;
@@ -220,11 +346,17 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					745F3AF5270A696500EC5B16 = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					74A782D127827D4A00627C1E = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					74A782DC27827D5000627C1E = {
+						CreatedOnToolsVersion = 13.1;
 					};
 					74FAB622270D3E500041B1E1 = {
 						CreatedOnToolsVersion = 13.0;
@@ -246,6 +378,8 @@
 			targets = (
 				745F3AF5270A696500EC5B16 /* OSU ID */,
 				74FAB622270D3E500041B1E1 /* OSUIDWidgetExtension */,
+				74A782D127827D4A00627C1E /* OSU ID Watch */,
+				74A782DC27827D5000627C1E /* OSU ID Watch WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +392,23 @@
 				745F3B06270A696A00EC5B16 /* LaunchScreen.storyboard in Resources */,
 				745F3B03270A696A00EC5B16 /* Assets.xcassets in Resources */,
 				745F3B01270A696500EC5B16 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A782D027827D4A00627C1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A782D827827D4F00627C1E /* Assets.xcassets in Resources */,
+				74A782D627827D4A00627C1E /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A782DB27827D5000627C1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A782EB27827D5300627C1E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +481,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74A782D927827D5000627C1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A782E727827D5000627C1E /* NotificationController.swift in Sources */,
+				74A782E927827D5000627C1E /* ComplicationController.swift in Sources */,
+				74A782E527827D5000627C1E /* ExtensionDelegate.swift in Sources */,
+				74A782E327827D5000627C1E /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74FAB61F270D3E500041B1E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,6 +504,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		74A782E027827D5000627C1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74A782DC27827D5000627C1E /* OSU ID Watch WatchKit Extension */;
+			targetProxy = 74A782DF27827D5000627C1E /* PBXContainerItemProxy */;
+		};
+		74A782EF27827D5400627C1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74A782D127827D4A00627C1E /* OSU ID Watch */;
+			targetProxy = 74A782EE27827D5400627C1E /* PBXContainerItemProxy */;
+		};
 		74FAB62F270D3E570041B1E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 74FAB622270D3E500041B1E1 /* OSUIDWidgetExtension */;
@@ -364,6 +536,14 @@
 				745F3B05270A696A00EC5B16 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		74A782D427827D4A00627C1E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74A782D527827D4A00627C1E /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -553,6 +733,118 @@
 			};
 			name = Release;
 		};
+		74A782F227827D5400627C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = 5E845TX3E6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = OSU_ID_Watch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "OSU ID Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.ipooglecodes.OSU-ID";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipooglecodes.OSU-ID.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		74A782F327827D5400627C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = 5E845TX3E6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = OSU_ID_Watch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "OSU ID Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.ipooglecodes.OSU-ID";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipooglecodes.OSU-ID.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		74A782F527827D5400627C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = 5E845TX3E6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OSU ID Watch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "OSU ID Watch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = OSU_ID_Watch_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = OSU_ID_Watch_WatchKit_Extension.ExtensionDelegate;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipooglecodes.OSU-ID.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		74A782F627827D5400627C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
+				DEVELOPMENT_TEAM = 5E845TX3E6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OSU ID Watch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "OSU ID Watch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = OSU_ID_Watch_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = OSU_ID_Watch_WatchKit_Extension.ExtensionDelegate;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipooglecodes.OSU-ID.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
 		74FAB632270D3E570041B1E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -628,6 +920,24 @@
 			buildConfigurations = (
 				745F3B0B270A696A00EC5B16 /* Debug */,
 				745F3B0C270A696A00EC5B16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74A782F727827D5400627C1E /* Build configuration list for PBXNativeTarget "OSU ID Watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A782F527827D5400627C1E /* Debug */,
+				74A782F627827D5400627C1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74A782F827827D5400627C1E /* Build configuration list for PBXNativeTarget "OSU ID Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A782F227827D5400627C1E /* Debug */,
+				74A782F327827D5400627C1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
