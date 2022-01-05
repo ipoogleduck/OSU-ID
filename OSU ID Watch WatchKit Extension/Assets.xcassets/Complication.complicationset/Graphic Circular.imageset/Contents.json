@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "OSU Dinning ID-4.svg",
       "idiom" : "watch",
       "scale" : "2x"
     },
     {
+      "filename" : "OSU Dinning ID-2.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">183"

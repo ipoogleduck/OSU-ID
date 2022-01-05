@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -11,14 +12,23 @@
             <objects>
                 <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="OSU_ID_Watch" customModuleProvider="target">
                     <items>
-                        <group width="1" height="40" alignment="left" id="345-Ph-Lph">
+                        <group width="0.96999999999999997" height="60" alignment="left" id="345-Ph-Lph">
                             <items>
-                                <label alignment="left" verticalAlignment="bottom" text="Hi" id="CzJ-eB-gve">
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </label>
+                                <imageView width="50" height="0.69999999999999996" alignment="left" verticalAlignment="bottom" image="osuLogo" contentMode="scaleAspectFit" id="82p-jG-Kad"/>
+                                <group alignment="right" verticalAlignment="bottom" layout="vertical" id="fI8-VG-zx6">
+                                    <items>
+                                        <label alignment="right" text="NAME" id="xkq-sw-rt5">
+                                            <color key="textColor" name="mainColor"/>
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="11"/>
+                                        </label>
+                                        <label alignment="right" verticalAlignment="bottom" text="Open iPhone App" minimumScaleFactor="0.20000000000000001" id="CzJ-eB-gve">
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                    </items>
+                                </group>
                             </items>
                         </group>
-                        <imageView alignment="left" id="zvq-Ld-duk"/>
+                        <imageView width="0.94999999999999996" height="102" alignment="center" id="zvq-Ld-duk"/>
                     </items>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
@@ -61,4 +71,10 @@
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="osuLogo" width="1200" height="664"/>
+        <namedColor name="mainColor">
+            <color red="0.86500000953674316" green="0.25900000333786011" blue="0.0040000001899898052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74398C43278443A100F222C7 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE63BB270CDC0000FB0A40 /* UserDefaults.swift */; };
+		740099F72785262500018DCA /* UserDefaultsWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740099F62785262500018DCA /* UserDefaultsWatch.swift */; };
 		745F3AFA270A696500EC5B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F3AF9270A696500EC5B16 /* AppDelegate.swift */; };
 		745F3AFC270A696500EC5B16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F3AFB270A696500EC5B16 /* SceneDelegate.swift */; };
 		745F3AFE270A696500EC5B16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745F3AFD270A696500EC5B16 /* ViewController.swift */; };
@@ -102,6 +102,7 @@
 		2A105207C293FA13451D2D33 /* Pods-OSU ID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSU ID.debug.xcconfig"; path = "Target Support Files/Pods-OSU ID/Pods-OSU ID.debug.xcconfig"; sourceTree = "<group>"; };
 		2E4645186A90138747724DFD /* Pods_OSU_ID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSU_ID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A1C9C063E0A6E86DB22E1C /* Pods-OSU ID.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSU ID.release.xcconfig"; path = "Target Support Files/Pods-OSU ID/Pods-OSU ID.release.xcconfig"; sourceTree = "<group>"; };
+		740099F62785262500018DCA /* UserDefaultsWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWatch.swift; sourceTree = "<group>"; };
 		74398C44278443D300F222C7 /* OSU ID Watch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OSU ID Watch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		74398C45278444E700F222C7 /* OSU ID Watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OSU ID Watch.entitlements"; sourceTree = "<group>"; };
 		745F3AF6270A696500EC5B16 /* OSU ID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OSU ID.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +229,7 @@
 			children = (
 				74398C44278443D300F222C7 /* OSU ID Watch WatchKit Extension.entitlements */,
 				74A782E227827D5000627C1E /* InterfaceController.swift */,
+				740099F62785262500018DCA /* UserDefaultsWatch.swift */,
 				74A782E427827D5000627C1E /* ExtensionDelegate.swift */,
 				74A782E627827D5000627C1E /* NotificationController.swift */,
 				74A782E827827D5000627C1E /* ComplicationController.swift */,
@@ -491,8 +493,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				74A782E727827D5000627C1E /* NotificationController.swift in Sources */,
-				74398C43278443A100F222C7 /* UserDefaults.swift in Sources */,
 				74A782E927827D5000627C1E /* ComplicationController.swift in Sources */,
+				740099F72785262500018DCA /* UserDefaultsWatch.swift in Sources */,
 				74A782E527827D5000627C1E /* ExtensionDelegate.swift in Sources */,
 				74A782E327827D5000627C1E /* InterfaceController.swift in Sources */,
 			);
@@ -680,7 +682,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OSU ID/OSU ID.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OSU ID/Info.plist";
@@ -714,7 +716,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OSU ID/OSU ID.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OSU ID/Info.plist";
@@ -747,7 +749,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OSU ID Watch/OSU ID Watch.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = OSU_ID_Watch_WatchKit_Extension;
@@ -774,7 +776,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "OSU ID Watch/OSU ID Watch.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = OSU_ID_Watch_WatchKit_Extension;
@@ -799,7 +801,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "OSU ID Watch WatchKit Extension/OSU ID Watch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OSU ID Watch WatchKit Extension/Info.plist";
@@ -830,7 +832,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "OSU ID Watch WatchKit Extension/OSU ID Watch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OSU ID Watch WatchKit Extension/Info.plist";
@@ -862,7 +864,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = OSUIDWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OSUIDWidget/Info.plist;
@@ -891,7 +893,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = OSUIDWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 5E845TX3E6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OSUIDWidget/Info.plist;

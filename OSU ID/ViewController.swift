@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 var hasOpenedMainScreen = false
 
@@ -17,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet var barcodeImage: UIImageView!
     @IBOutlet var nameHeaderLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
+    
+    var session: WCSession?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .darkContent
@@ -32,6 +35,13 @@ class ViewController: UIViewController {
         IDBKView.layer.shadowRadius = 20
         reloadBarcode()
         reloadName()
+        
+        if WCSession.isSupported() {
+            session = WCSession.default
+            session?.delegate = self
+            session?.activate()
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +58,10 @@ class ViewController: UIViewController {
 //            UIScreen.main.brightness = 1
 //            lastPage = 0
 //        }
+        if let validSession = self.session, validSession.isReachable, let data = UserDefaults.getData(key: .barcodeImage) {
+            let data: [String: Any] = ["name": name as Any, "image": data]
+            validSession.sendMessage(data, replyHandler: nil, errorHandler: nil)
+        }
     }
     
     func reloadBarcode() {
@@ -71,3 +85,19 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: WCSessionDelegate {
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        print("received message: \(message)")
+    }
+    
+}
